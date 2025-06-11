@@ -1,10 +1,15 @@
 public class BubbleSort {
     private int[] valores;
 
-    public BubbleSort(int[] valores) {
+    public BubbleSort() {
+    }
+
+    public double testaAlgoritmo(int[] valores) {
         this.valores = valores;
+        long tempoInicial = System.nanoTime();
         ordena();
-        imprimiValores();
+        long tempoFinal = System.nanoTime();
+        return (tempoFinal - tempoInicial) / 1_000_000_000.0;
     }
 
     private void ordena(){
@@ -19,7 +24,7 @@ public class BubbleSort {
         }
     }
 
-    private void imprimiValores(){
+    public void imprimiValores(){
         for(int valor : valores) {
             System.out.print(valor + " ");
         }

@@ -1,11 +1,17 @@
 public class InsertionSort {
 
     private int[] valores;
+    private long tempoDeExecucao;
 
-    public InsertionSort(int[] valores) {
+    public InsertionSort() {
+    }
+
+    public double testaAlgoritmo(int[] valores) {
         this.valores = valores;
+        long tempoInicial = System.nanoTime();
         ordena();
-        imprimiValores();
+        long tempoFinal = System.nanoTime();
+        return (tempoFinal - tempoInicial) / 1_000_000_000.0;
     }
 
     private void ordena(){
@@ -20,7 +26,7 @@ public class InsertionSort {
         }
     }
 
-    private void imprimiValores(){
+    public void imprimiValores(){
         for(int valor : valores) {
             System.out.print(valor + " ");
         }
