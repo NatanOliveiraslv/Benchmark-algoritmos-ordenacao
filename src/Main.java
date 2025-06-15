@@ -26,7 +26,7 @@ public class Main {
                 "reversa_1000000.txt",
         };
 
-        System.out.println("-------------- Tempo de execução em nanosegundos --------------");
+        System.out.println("-------------- Tempo de execução em segundos --------------");
         System.out.println();
 
         for (String pasta : pastas) {
