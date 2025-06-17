@@ -9,9 +9,8 @@ public class CarregaDados {
     private int[] valores;
 
     public CarregaDados(String nomeArq){
-        String nomeArq1 = Paths.get("src", nomeArq).toString();
-        valores = new int[qtdValores(nomeArq1)];
-        try(BufferedReader br = new BufferedReader(new FileReader(nomeArq1))) {
+        valores = new int[qtdValores(nomeArq)];
+        try(BufferedReader br = new BufferedReader(new FileReader(nomeArq))) {
             String linha;
             int i = 0;
             while ((linha = br.readLine()) != null){
